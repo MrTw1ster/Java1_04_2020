@@ -110,7 +110,6 @@ public class GameXO {
             if (isCellValid(map, x, y)) {
                 humanTurn(map, x, y);
                 printMap(map);
-                // TODO: 14.04.2020 отследить ничью
                 if (checkVictory(map, DOT_X)) {
                     System.out.println("Вы победили");
                     return;
@@ -129,7 +128,6 @@ public class GameXO {
                 printMap(map);
             } else {
                 System.out.println("Введены некорректные данные! Введите еще раз");
-                // TODO: 14.04.2020 user friendly help comments
             }
         }
     }
