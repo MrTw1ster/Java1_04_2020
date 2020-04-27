@@ -1,14 +1,28 @@
 package lesson6.homework;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
+    static int catCount;
 
-    public static void main(String[] args) {
+    public Cat () {
+        catCount++;
+        setType("Cat");
+        setName("BingoBom");
 
-        //
-//        for (int i = 0; i < 12; i++) {
-//            System.out.println(new Cat().getId());
-//        }
-//        System.out.println(Cat.getCounter());
-        A a = new C();
+
+    }
+
+    @Override
+    public void running(int distance) {
+        int maxRunningDistance = 200;
+        if (distance < maxRunningDistance) {
+            System.out.println(getName() + " say: I run " + distance + "m! Meow!");
+        } else {
+            System.out.println(getName() + " say: I'm a cat! I can't! I went to sleep!");
+        }
+    }
+
+    @Override
+    public void swimming(int distance) {
+        System.out.println(getName() + " say: I cant swim! Meow!");
     }
 }

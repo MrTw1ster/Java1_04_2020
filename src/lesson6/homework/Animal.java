@@ -1,20 +1,32 @@
 package lesson6.homework;
 
-public class Animal {
-
-    private static int counter = 0;
-    private int id;
+public abstract class Animal {
+    private String type;
+    private String name;
+    static int animalCount;
 
     public Animal() {
-        counter++;
-        id = counter;
+        animalCount++;
     }
 
-    public static int getCounter() {
-        return counter;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getId() {
-        return id;
+
+    public String getName() {
+        return name;
     }
+
+    protected void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public abstract void running(int distance);
+
+    public abstract void swimming(int distance);
 }
